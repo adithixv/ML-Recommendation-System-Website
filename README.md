@@ -33,7 +33,7 @@ Contents of the Repository:
 
 ---
 
-4.	content.py – 
+4.	recSys.py – 
 
     Python script containing the Recommendation System function code 
 
