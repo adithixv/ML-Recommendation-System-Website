@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/home.css"/>
+    <title>FlixFinder</title>
+    <link rel="icon" type="image/x-icon" href="static/FF.jpg">
+</head>
+<body>
+<nav>
+    <img src="static/FF.jpg" alt="Logo">
+    <span class="logo">FlixFinder</span>
+    <a href={{url_for("signup")}}>Switch Accounts</a>
+</nav>
+    <div class="container">
+        
+        <div class="title">
+            <div class="content">
+                <h1>Netflix Recommendations</h1>
+                <h2>Can't get enough of Neflix but don't know what to watch?</h2>
+                
+                <form action="suggest" method="post">
+                    <h3>Give us the name of your favourite Movie or Series and we will suggest titles you might enjoy</h3>
+                    <div class="mov">
+                        <input type="text" name="movie" placeholder="Enter Input">
+                        <button type="Submit">Suggest</button>
+                    </div>
+                    {{err}}
+                    <p>Suggestions for: {{ movie }}</p>
+                </form>
+                <ul>
+                    {% for item in mylist %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+       
+        </div>
+    </div>
+</body>
+</html>
